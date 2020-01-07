@@ -1,0 +1,37 @@
+<h1>Breweries</h1>
+
+<ul *ngIf="brews">
+    <li *ngFor="let brew of brews">
+      <p class="name">{{ brew.name }}</p>
+      <p class="country">{{ brew.country }}</p>
+      <a class="site" href="{{ brew.website_url }}">site</a>
+    </li>
+  </ul>
+
+  <table class="table table-bordered table-hover">
+    <thead class="thead-light text-center">
+      <tr>
+        <th>UserId</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="lists">
+      <tr *ngFor="let list of lists">
+        <td>{{list.userId}}</td>
+        <td>{{list.id}}</td>
+        <td>{{list.title}}</td>
+        <td>{{list.body}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <ul *ngIf="lists">
+    <li *ngFor="let list of lists">
+      <p class="userId">{{ list.userId }}</p>
+      <p class="id">{{ list.id }}</p>
+      <p class="title">{{ list.title }}</p>
+      <p class="body">{{ list.body }}</p>
+    </li>
+  </ul> -->
