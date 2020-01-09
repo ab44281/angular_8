@@ -1,18 +1,30 @@
-<h1 class="py-3">Employee Data</h1>
-
+<div class="row">
+<div class="py-3">
+<h1>Employee Data</h1>
+<button class="btn btn-success" (click)="addEmp()">Add Employee</button>
+</div>
+<div class="col-md-12">
 <table class="table table-bordered table-hover">
     <thead class="thead-light text-center">
         <tr>
             <th>Emp Code</th>
             <th>Name</th>
             <th>Salary</th>
+            <th>Action</th>
         </tr>
     </thead>
-        <tbody *ngIf="employee">
-            <tr *ngFor="let emp of employee">
-                <td>{{emp.emp_code}}</td>
-                <td>{{emp.name}}</td>
-                <td>{{emp.salary}}</td>
-            </tr>
-        </tbody>    
+    <tbody *ngIf="employee">
+        <tr *ngFor="let emp of employee">
+            <td>{{emp.emp_code}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.salary}}</td>
+            <td class="text-center">
+                <button class="btn btn-info" (click)="editEmployee()">Edit</button>
+                <button class="btn btn-danger" (click)="deleteEmployee()" style="margin-left:4rem">Delete</button>
+            </td>
+        </tr>
+    </tbody>    
 </table>
+</div>
+
+</div>

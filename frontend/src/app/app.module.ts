@@ -11,6 +11,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ListComponent } from './components/list/list.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { AddEmpComponent } from './components/employee/add-emp/add-emp.component';
+import { EditEmpComponent } from './components/employee/edit-emp/edit-emp.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { EmployeeComponent } from './components/employee/employee.component';
     AboutComponent,
     ContactComponent,
     ListComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    AddEmpComponent,
+    EditEmpComponent
   ],
   imports: [
     BrowserModule,
