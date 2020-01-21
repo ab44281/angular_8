@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="py-3">
+    <!-- <h1>User Data
+        <a class="float-right" [routerLink]="['/todo/add']">
+            <button type="button" class="btn btn-primary">Add</button>
+          </a>
+    </h1> -->
+    <!-- <button class="btn btn-success" (click)="addEmployee()">Add User</button> -->
+    </div>
+    <div class="col-md-12">
+        <h1>User Data
+            <a class="float-right" [routerLink]="['add-emp']">
+                <button type="button" class="btn btn-primary">Add</button>
+              </a>
+              <!-- <button class="btn btn-success float-right" (click)="addEmp()">Add User</button> -->
+        </h1>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light text-center">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>user Code</th>            
+                <th>Salary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.emp_code}}</td>            
+                <td>{{emp.salary}}</td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-danger mr-1" (click)="deleteEmployee(emp)">Delete</button>
+                    <a [routerLink]="['edit-emp', emp.id]">
+                      <button type="button" class="btn btn-primary">Edit</button>
+                    </a>
+                    <!-- <button class="btn btn-info" (click)="editEmp(emp.id)">Edit</button> -->
+                    <!-- <button class="btn btn-danger" (click)="deleteEmployee(emp)" style="margin-left:4rem">Delete</button> -->
+                </td>
+            </tr>
+        </tbody>    
+    </table>
+    </div>
+    
+    </div>

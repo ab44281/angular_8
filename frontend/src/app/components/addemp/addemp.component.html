@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center">
+    <div class="col-md-6">
+        <h2 class="text-center">Add User</h2>
+        <form [formGroup]="addForm" (ngSubmit)="addEmployee()">
+            <div class="form-group">
+                <label for="empName">Name</label>
+                <input type="text" formControlName="empName" placeholder="Name" class="form-control" id="empName">
+            </div>
+            <div class="form-group">
+                <label for="empCode">Code</label>
+                <input type="text" formControlName="empCode" placeholder="Code" class="form-control" id="empCode">
+            </div>
+            <div class="form-group">
+                <label for="empSalary">Salary</label>
+                <input type="text" formControlName="empSalary" placeholder="Salary" class="form-control" id="empSalary">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success" [disabled]="addForm.invalid">Add</button>
+                <a [routerLink]="['/emp']">
+                    <button type="submit" class="btn btn-danger ml-2">Back</button>
+                </a>
+            </div>        
+        </form>
+    </div>
+    </div>
