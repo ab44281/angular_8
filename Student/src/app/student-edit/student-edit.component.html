@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center">
+    <div class="col-md-6">
+        <h2>Update User</h2>
+        <form (ngSubmit)="update()" #myForm="ngForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="data.name" name="name" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" id="age" [(ngModel)]="data.age" name="age" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" [(ngModel)]="data.address" name="address" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success" [disabled]="!myForm.form.valid">Update</button>
+                <button type="submit" class="btn btn-danger ml-1" [routerLink]="[ '/list']">Cancel</button>
+            </div>
+        </form>        
+    </div>
+</div>

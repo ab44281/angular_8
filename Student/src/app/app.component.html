@@ -1,0 +1,15 @@
+<header>
+    <div class="container">
+        <a [routerLink]="[ '/' ]"><b>CRUD</b></a>
+        <nav>
+            <ul>
+                <li>
+                    <a [routerLink]="[ '/list' ]">List</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="container py-5">
+    <router-outlet></router-outlet>
+</div>
